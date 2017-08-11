@@ -55,7 +55,7 @@ class Influx(Database):
         Influx.db = InfluxDBClient(self.host, self.port, user, passcode, dbname)
         Influx.db.create_database(dbname)
         # // TODO replace with logging
-        print("Created database '{0}' at http://{1} named '{2}'".format(self.get_database, self.host, dbname))
+#        print("Created database '{0}' at http://{1} named '{2}'".format(self.get_database, self.host, dbname))
 
     def write(self, cols, data):
         raw_data = dict(zip(cols, data))

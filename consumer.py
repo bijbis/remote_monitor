@@ -18,4 +18,4 @@ class ConsumerThread(threading.Thread):
             if not self.q.empty():
                 item = self.q.get()
                 self.database.write(self.columns, item)
-                time.sleep(10)
+                time.sleep(75)

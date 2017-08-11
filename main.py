@@ -10,7 +10,7 @@ if __name__ == '__main__':
     q = Queue()
     database = Influx(database='influxDB', user='root', passcode='root', dbname='test',
                       port=8086, host='localhost')
-    columns = ['current', 'power', 'voltage']
+    columns = ['current', 'power', 'voltage', 'total_energy', 'A', 'B', 'C', 'D']
     RemoteMonitor.Meta.client = database.db
     RemoteMonitor.Meta.series_name = 'remote_monitor'
     RemoteMonitor.Meta.fields = columns
